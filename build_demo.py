@@ -9,6 +9,7 @@ page cannot drift away from the code. Nothing here reaches the network.
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import os
 import shutil
@@ -142,6 +143,10 @@ def main(argv: list[str] | None = None) -> int:
         problems = []
         if not md_path.exists() or md_path.read_text(encoding="utf-8") != text:
             problems.append("report/demo-report.md is not what the collector produces at this commit")
+            committed = md_path.read_text(encoding="utf-8").splitlines() if md_path.exists() else []
+            diff = list(difflib.unified_diff(committed, text.splitlines(),
+                                             "committed", "produced now", lineterm="", n=1))
+            problems.extend(diff[:60])
         if not json_path.exists() or json_path.read_text(encoding="utf-8") != payload:
             problems.append("report/demo-report.json is not what the collector produces at this commit")
         composition_path = HERE / "report" / "fixture-composition.json"
