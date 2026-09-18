@@ -1,0 +1,28 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  suite:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: versions under test
+        run: |
+          python3 --version
+          git --version
+          bash --version | head -n 1
+      - name: the controls, on the synthetic workspace
+        run: python3 -m unittest discover -s tests -t tests -v
+      - name: the published report is the one this commit produces
+        run: python3 build_demo.py --check

@@ -1,0 +1,27 @@
+{
+  "candidate_directories": 131,
+  "independent_repositories": 12,
+  "linked_worktrees_in_scope": 72,
+  "linked_worktrees_owner_outside_scope": 1,
+  "node_modules_trees": 83,
+  "not_registered_by_any_repository": 41,
+  "registrations_without_directory": 3,
+  "roots": 20,
+  "scale": "full",
+  "situations": {
+    "api-gateway-wt-legacy-export": "clean, contained in the default branch, and old",
+    "api-gateway-wt-oauth-refresh": "work that exists only here and is in no commit",
+    "api-gateway-wt-on-external-volume": "a worktree locked on purpose, usually on removable or shared storage",
+    "api-gateway-wt-rate-limits": "commits that the default branch does not contain",
+    "infra-cdk-baseline": "a repository of its own, which a count based cleanup would treat as one more directory",
+    "vendor-sdk-wt-patch-2": "a valid worktree whose owner is outside the roots the scan was given",
+    "web-console-copy-2": "a directory that looks like a working tree and that no repository claims",
+    "web-console-wt-billing-table": "tracked files modified and not committed",
+    "web-console-wt-checkout-v2": "a worktree moved on disk, which git repairs rather than forgets",
+    "web-console-wt-old-typography": "only ignored files a build regenerates, which is not a reason to preserve",
+    "web-console-wt-search-filters": "recent activity, which is in flight work rather than residue",
+    "worker-pipeline-wt-local-env": "an ignored file a build does not regenerate, for example a local environment file",
+    "worker-pipeline-wt-retry-policy": "a worktree whose metadata directory is gone"
+  },
+  "worktree_metadata_unavailable": 5
+}
