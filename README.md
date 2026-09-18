@@ -92,6 +92,11 @@ hold the only trace of an incident.
   configures one is therefore left uninspected and reported as undetermined,
   rather than have git run a conversion on our behalf. The test builds a
   repository whose filter writes a witness file, and the witness never appears.
+  What is read to find out: the attribute files git would use, which are the
+  tracked ones, the one at the root of the working tree whether tracked or not,
+  the per repository file and the per user file. An untracked attributes file
+  sitting in a subdirectory is not read, so a filter assigned only from there
+  would not be seen.
 - **Nothing outside the roots you name.** The scope check comes before any
   question: a repository outside the roots is not asked for its default branch
   either. A test records the directory of every command that ran and fails if
