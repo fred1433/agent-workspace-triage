@@ -54,7 +54,11 @@ class DecisionsOnTheFixture(unittest.TestCase):
         self.assertEqual(set(), recorded & listed,
                          "a registration with no directory must not appear as a directory to decide about")
         for row in absent:
-            self.assertIn("removes the registration", row["note"])
+            if row.get("explained_by"):
+                self.assertIn(row["explained_by"], row["note"],
+                              "a registration explained by a move names the directory it belongs to")
+            else:
+                self.assertIn("removes the registration", row["note"])
 
     def test_counts_match_the_composition_the_fixture_reports(self):
         composition = support.composition_of(self.fixture)

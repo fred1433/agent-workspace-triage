@@ -31,6 +31,17 @@ MARK_START = "<!-- report:start -->"
 MARK_END = "<!-- report:end -->"
 DECISIONS_START = "<!-- decisions:start -->"
 DECISIONS_END = "<!-- decisions:end -->"
+COMMIT_START = "<!-- commit:start -->"
+COMMIT_END = "<!-- commit:end -->"
+
+# The convention that turned a description of a workspace into a buildable one.
+# It travels with the report itself, not only with the page, because the report
+# is the thing somebody downloads and reads on its own.
+PROVENANCE = (
+    "Fixture convention: 131 candidate directories, including 41 unregistered. "
+    "Illustrative hypothesis, not a reconstruction. The composition and every situation built into this "
+    "workspace are written in fixture/MANIFEST.md."
+)
 
 # The three decisions the page opens with, one of each status, named here so
 # that they come from the generated report and never from a hand written copy.
@@ -55,6 +66,7 @@ def generate(scale: str = "full") -> tuple[str, dict, dict]:
             roots=roots, now=now, stale_days=STALE_DAYS, budget=BUDGET, max_depth=3,
             excludes=[], git_timeout=30.0, with_sizes=False,
         )
+        report["provenance_note"] = PROVENANCE
         text = triage.markdown(report, sessions=None, hook=None, with_sizes=False)
         return text, report, composition
     finally:
@@ -74,31 +86,36 @@ def with_code(text: str) -> str:
 
 
 def decisions_html(report: dict) -> str:
-    """The featured decisions, rendered from the report this commit produces."""
+    """The featured decisions, rendered from the report this commit produces.
+
+    Compact on purpose: the status, the path and the decision are what a reader
+    needs in the first screen. The other three parts are one click away, and
+    they are the same four parts as every line of the report.
+    """
     rows = {os.path.basename(row["path"]): row for row in report["decisions"]}
     blocks = []
     for name in FEATURED:
         row = rows[name]
-        if row["decision"] == "keep":
-            verdict = "Keep. " + "; ".join(row["preserved_because"]) + "."
-        elif row["decision"].startswith("removal"):
-            verdict = "Removal candidate, to confirm. Every check in scope passed."
-        else:
-            verdict = "Undetermined. Nothing here supports a removal."
+        verdict = row["decision_sentence"]
+        if row["preserved_because"]:
+            joined = "; ".join(row["preserved_because"])
+            verdict += " " + joined + ("" if joined.endswith(".") else ".")
         blocks.append(
             f'''<div class="decision">
       <div class="status">{escape(row["decision"])}</div>
       <div class="path">{escape(row["path"])}</div>
-      <dl>
-        <dt>Observed</dt>
-        <dd>{with_code(row["observation"])}</dd>
-        <dt>Evidence</dt>
-        <dd>{with_code("; ".join(row["evidence"]))}</dd>
-        <dt>Decision</dt>
-        <dd><strong>{with_code(verdict)}</strong></dd>
-        <dt>Still open</dt>
-        <dd>{with_code(row["remaining_condition"])}</dd>
-      </dl>
+      <p class="verdict"><strong>{with_code(verdict)}</strong></p>
+      <details>
+        <summary>What was observed, the evidence, and what is still open</summary>
+        <dl>
+          <dt>Observed</dt>
+          <dd>{with_code(row["observation"])}</dd>
+          <dt>Evidence</dt>
+          <dd>{with_code("; ".join(row["evidence"]))}</dd>
+          <dt>Still open</dt>
+          <dd>{with_code(row["remaining_condition"])}</dd>
+        </dl>
+      </details>
     </div>'''
         )
     return "\n    ".join(blocks)
@@ -127,12 +144,39 @@ def inject_into_site(markdown_text: str, report: dict) -> bool:
     return True
 
 
+def stamp(sha: str) -> int:
+    """Name, on the page, the commit whose code produced the report it shows.
+
+    It runs after the commit that carries the report, because a commit cannot
+    contain its own identifier. The report is byte for byte the same on both, so
+    the check that the page carries the output of the code still holds.
+    """
+    page = HERE / "site" / "index.html"
+    html = page.read_text(encoding="utf-8")
+    if COMMIT_START not in html or COMMIT_END not in html:
+        print("the page carries no commit marker", file=sys.stderr)
+        return 1
+    link = (f'The report above is produced by commit '
+            f'<a href="https://github.com/fred1433/agent-workspace-triage/commit/{sha}">{sha[:10]}</a>, '
+            f'the one the tests ran on.')
+    head, rest = html.split(COMMIT_START, 1)
+    _old, tail = rest.split(COMMIT_END, 1)
+    page.write_text(head + COMMIT_START + link + COMMIT_END + tail, encoding="utf-8")
+    print(f"the page names commit {sha[:10]}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Build or verify the demonstration report.")
     parser.add_argument("--check", action="store_true", help="fail if the committed report is not what the code produces")
     parser.add_argument("--scale", choices=("full", "small"), default="full")
     parser.add_argument("--site", action="store_true", help="also write the report into the page")
+    parser.add_argument("--stamp", metavar="SHA",
+                        help="write into the page the commit that produced the report it carries")
     args = parser.parse_args(argv)
+
+    if args.stamp:
+        return stamp(args.stamp)
 
     text, report, composition = generate(args.scale)
     md_path = HERE / "report" / "demo-report.md"

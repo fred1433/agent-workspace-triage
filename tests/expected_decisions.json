@@ -17,7 +17,7 @@
   },
   "api-gateway-wt-rate-limits": {
     "decision": "keep",
-    "because": "the default branch does not contain these commits",
+    "because": "the established reference branch does not contain these commits",
     "evidence_contains": "not contained in"
   },
   "web-console-wt-checkout-v2": {
@@ -32,8 +32,8 @@
   },
   "worker-pipeline-wt-local-env": {
     "decision": "keep",
-    "because": "an ignored file that no build regenerates is work, not residue",
-    "evidence_contains": "does not regenerate"
+    "because": "an ignored entry outside the assumed rebuildable list may be the only copy of something",
+    "evidence_contains": "rebuildability and backup status were not checked"
   },
   "web-console-wt-search-filters": {
     "decision": "keep",
@@ -42,12 +42,12 @@
   },
   "api-gateway-wt-legacy-export": {
     "decision": "removal candidate, to confirm",
-    "because": "clean, contained in the default branch, and old, with the remaining confirmations named",
+    "because": "clean, contained in the reference branch, and old, with the checks read and the remaining confirmations named",
     "remaining_contains": "working directory"
   },
   "web-console-wt-old-typography": {
     "decision": "removal candidate, to confirm",
-    "because": "ignored files a build regenerates are not a reason to preserve",
+    "because": "ignored entries assumed to be build output are not a reason to preserve",
     "remaining_contains": "open review"
   },
   "vendor-sdk-wt-patch-2": {

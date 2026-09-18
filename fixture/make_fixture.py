@@ -103,6 +103,14 @@ def new_repo(path: Path, when: str = OLD) -> Path:
     write(path / ".gitignore", "node_modules/\ndist/\n.env\n*.log\n")
     run(["git", "add", "-A"], cwd=str(path))
     run(["git", "commit", "-q", "-m", "initial commit"], cwd=str(path), when=when)
+    # What a clone leaves behind, and what the collector needs before it will
+    # compare a branch with anything: a remote tracking branch and an
+    # origin/HEAD that says which one is the default. Without them the
+    # collector reports the repository as undetermined rather than comparing a
+    # worktree with whatever branch happens to be checked out.
+    head = run(["git", "rev-parse", "HEAD"], cwd=str(path)).strip()
+    run(["git", "update-ref", "refs/remotes/origin/main", head], cwd=str(path))
+    run(["git", "symbolic-ref", "refs/remotes/origin/HEAD", "refs/remotes/origin/main"], cwd=str(path))
     return path
 
 

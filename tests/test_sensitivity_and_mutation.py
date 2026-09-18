@@ -27,7 +27,8 @@ class Sensitivity(unittest.TestCase):
         after = support.collect(fixture)
         moved = support.by_name(after)["api-gateway-wt-legacy-export"]
         self.assertEqual("keep", moved["decision"])
-        self.assertIn("does not regenerate", " ".join(moved["preserved_because"]))
+        self.assertIn("rebuildability and backup status were not checked",
+                      " ".join(moved["preserved_because"]))
         self.assertEqual(before["counts"]["candidate_directories"], after["counts"]["candidate_directories"],
                          "the number of directories did not change, only one decision did")
         self.assertEqual(before["counts"]["keep"] + 1, after["counts"]["keep"])

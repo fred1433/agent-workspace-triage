@@ -48,6 +48,11 @@ def fresh_fixture(scale: str = "small") -> Path:
     return holder / "fixture"
 
 
+def now() -> datetime:
+    """The reference time every test reads a report against."""
+    return datetime.fromisoformat(REFERENCE_TIME)
+
+
 def roots_of(fixture: Path) -> list[str]:
     return sorted(str(path) for path in (fixture / "workspace").iterdir() if path.is_dir())
 

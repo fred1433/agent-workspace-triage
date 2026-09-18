@@ -10,8 +10,10 @@ import ast
 import hashlib
 import json
 import os
+import shutil
 import socket
 import subprocess
+import tempfile
 import sys
 import threading
 import unittest
@@ -19,6 +21,11 @@ from pathlib import Path
 
 import support
 import triage
+
+ALLOWED_IMPORTS = {
+    "__future__", "argparse", "dataclasses", "datetime", "fnmatch", "json", "os",
+    "pathlib", "re", "subprocess", "sys", "time",
+}
 
 NETWORK_MODULES = {
     "socket", "ssl", "urllib", "urllib3", "http", "httplib", "requests", "ftplib",
@@ -83,7 +90,8 @@ class ReadOnly(unittest.TestCase):
         triage.COMMAND_TRACE.clear()
         support.collect(fixture)
         self.assertTrue(triage.COMMAND_TRACE)
-        for argv in triage.COMMAND_TRACE:
+        for call in triage.COMMAND_TRACE:
+            argv = call["argv"]
             self.assertIn(argv[0], triage.ALLOWED_EXECUTABLES, argv)
             if argv[0] == "git":
                 self.assertIn("--no-optional-locks", argv, argv)
@@ -95,7 +103,9 @@ class ReadOnly(unittest.TestCase):
 
 
 class NoNetwork(unittest.TestCase):
-    def test_the_collector_imports_no_network_module(self):
+    def test_the_collector_imports_nothing_outside_a_named_list(self):
+        """An allow list, not a deny list: a deny list is a list of the network
+        clients somebody thought of."""
         source = (support.ROOT / "triage.py").read_text(encoding="utf-8")
         imported = set()
         for node in ast.walk(ast.parse(source)):
@@ -103,9 +113,57 @@ class NoNetwork(unittest.TestCase):
                 imported.update(alias.name.split(".")[0] for alias in node.names)
             elif isinstance(node, ast.ImportFrom) and node.module:
                 imported.add(node.module.split(".")[0])
+        self.assertEqual(set(), imported - ALLOWED_IMPORTS, sorted(imported - ALLOWED_IMPORTS))
         self.assertEqual(set(), imported & NETWORK_MODULES, sorted(imported & NETWORK_MODULES))
 
-    def test_a_listener_counts_no_connection_while_the_collector_runs(self):
+    def test_no_name_of_a_socket_or_an_http_client_appears_in_the_collector(self):
+        source = (support.ROOT / "triage.py").read_text(encoding="utf-8")
+        forbidden = {"socket", "create_connection", "urlopen", "Request", "HTTPConnection",
+                     "HTTPSConnection", "connect", "sendto", "getaddrinfo", "requests", "httpx"}
+        seen = set()
+        for node in ast.walk(ast.parse(source)):
+            if isinstance(node, ast.Name) and node.id in forbidden:
+                seen.add(node.id)
+            elif isinstance(node, ast.Attribute) and node.attr in forbidden:
+                seen.add(node.attr)
+        self.assertEqual(set(), seen, sorted(seen))
+
+    def test_the_collection_runs_with_no_network_namespace_at_all(self):
+        """The strong control: no network exists while the collector runs.
+
+        A proxy variable only catches a client that honours it. A namespace with
+        nothing in it catches everything, and the report still comes out whole,
+        which is what says the collector never needed a network.
+        """
+        required = os.environ.get("TRIAGE_REQUIRE_NAMESPACE") == "1"
+        if not shutil.which("unshare"):
+            if required:
+                self.fail("unshare was required for this run and is not installed")
+            self.skipTest("unshare is not available on this platform")
+        probe = subprocess.run(["unshare", "-rn", "true"], stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE, text=True)
+        if probe.returncode != 0:
+            if required:
+                self.fail(f"a network namespace was required and could not be created: {probe.stderr.strip()}")
+            self.skipTest("this machine does not allow an unprivileged network namespace")
+
+        fixture = support.build_fixture("small")
+        roots = []
+        for root in support.roots_of(fixture):
+            roots += ["--root", root]
+        with tempfile.TemporaryDirectory() as folder:
+            out = os.path.join(folder, "report.json")
+            done = subprocess.run(
+                ["unshare", "-rn", sys.executable, str(support.ROOT / "triage.py"), *roots,
+                 "--now", support.REFERENCE_TIME, "--json", out],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=600,
+            )
+            self.assertEqual(0, done.returncode, done.stderr)
+            report = json.loads(Path(out).read_text(encoding="utf-8"))
+        self.assertGreater(report["counts"]["candidate_directories"], 0,
+                           "the collection has to be whole with no network, not merely quiet")
+
+    def test_a_listener_set_as_a_proxy_counts_no_connection(self):
         fixture = support.build_fixture("small")
         connections = []
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

@@ -22,7 +22,18 @@ jobs:
           python3 --version
           git --version
           bash --version | head -n 1
+          unshare --version
       - name: the controls, on the synthetic workspace
+        env:
+          TRIAGE_REQUIRE_NAMESPACE: "1"
         run: python3 -m unittest discover -s tests -t tests -v
+      - name: the collection runs with no network at all, and a skip here fails
+        working-directory: tests
+        env:
+          TRIAGE_REQUIRE_NAMESPACE: "1"
+        run: python3 -m unittest test_readonly_and_privacy.NoNetwork -v
+      - name: the counter-examples a review ran against this code
+        working-directory: tests
+        run: python3 -m unittest test_verdict_counterexamples -v
       - name: the published report is the one this commit produces
         run: python3 build_demo.py --check

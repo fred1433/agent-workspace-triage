@@ -49,8 +49,10 @@ class BoundedWalk(unittest.TestCase):
         report = support.collect(fixture)
         roots = {root["root"]: root for root in report["coverage"]}
         self.assertGreaterEqual(roots[root]["symlinks_not_followed"], 1)
-        self.assertEqual("complete", roots[root]["coverage"],
-                         "not following a symlink is a decision, not a failure")
+        self.assertNotEqual("partial", roots[root]["coverage"],
+                            "not following a symlink is a decision, not a failure")
+        self.assertIn("symlink", roots[root]["reason"],
+                      "a decision that leaves something unopened is named, not implied by silence")
 
     def test_the_depth_limit_is_visible_and_can_be_raised(self):
         fixture = support.fresh_fixture("small")
@@ -64,6 +66,8 @@ class BoundedWalk(unittest.TestCase):
         roots = {root["root"]: root for root in shallow["coverage"]}
         self.assertGreaterEqual(roots[root]["depth_limit_reached"], 1,
                                 "a directory left unopened because of the depth limit is reported")
+        self.assertEqual("bounded", roots[root]["coverage"],
+                         "a root with a subtree left unopened is not complete")
 
         deeper = support.collect(fixture, max_depth=6)
         self.assertIn("a-deep-project", support.by_name(deeper))

@@ -1,9 +1,9 @@
 {
   "boundaries": {
     "commands": "no cleanup command is printed or executed; a status is a proposal with its evidence",
-    "network": "the collector calls no external service and sends no report",
-    "outside_scope": "nothing outside the roots you name is read, including the owner of a worktree attached elsewhere",
-    "writes": "no file, index, reference or configuration of an inspected repository is written; git is called with --no-optional-locks"
+    "network": "no external service is called and no report is sent: the collector imports no network client, and a control runs a whole collection with no network access at all",
+    "outside_scope": "nothing outside the roots you name is read, including the owner of a worktree attached elsewhere, which is not asked anything at all",
+    "writes": "nothing under the roots you name is written: no file, no index, no reference, no configuration. Git is called with --no-optional-locks, and a repository that configures a content filter is left uninspected rather than have git run that filter. The report is written where you ask for it, and nowhere else"
   },
   "counts": {
     "candidate_directories": 131,
@@ -21,202 +21,262 @@
   },
   "coverage": [
     {
-      "coverage": "complete",
+      "candidates_not_descended": 6,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 6,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 6,
+      "reason": "6 candidate directories not descended into",
       "root": "archive",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 7,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 7,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 7,
+      "reason": "7 candidate directories not descended into",
       "root": "data",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "docs-site",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 7,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 7,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 7,
+      "reason": "7 candidate directories not descended into",
       "root": "experiments",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 8,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 8,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 8,
+      "reason": "8 candidate directories not descended into",
       "root": "infra",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "integrations",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "internal",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "labs",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "migrations",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "ml",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 8,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 8,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 8,
+      "reason": "8 candidate directories not descended into",
       "root": "mobile",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "ops",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "partners",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 11,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 11,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 11,
+      "reason": "11 candidate directories not descended into",
       "root": "platform",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 5,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 5,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 5,
+      "reason": "5 candidate directories not descended into",
       "root": "prototypes",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 7,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 7,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 7,
+      "reason": "7 candidate directories not descended into",
       "root": "sandbox",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 8,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 8,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 8,
+      "reason": "8 candidate directories not descended into",
       "root": "services",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 6,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 6,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 6,
+      "reason": "6 candidate directories not descended into",
       "root": "tools",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 7,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 7,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 7,
+      "reason": "7 candidate directories not descended into",
       "root": "vendor",
       "symlinks_not_followed": 0
     },
     {
-      "coverage": "complete",
+      "candidates_not_descended": 11,
+      "coverage": "bounded",
+      "depth_limit": 3,
       "depth_limit_reached": 0,
       "directories_examined": 11,
       "directories_skipped": 0,
       "errors": [],
-      "reason": "",
+      "not_opened": 11,
+      "reason": "11 candidate directories not descended into",
       "root": "web",
       "symlinks_not_followed": 0
     }
@@ -225,6 +285,7 @@
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -238,15 +299,16 @@
       "path": "archive/billing-service-backup-25",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-003",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to billing-service",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -256,14 +318,15 @@
       "owner": "billing-service",
       "path": "archive/billing-service-wt-003",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -277,11 +340,12 @@
       "path": "archive/media-service-backup-5",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "5 linked worktrees registered by this repository"
@@ -297,14 +361,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-043",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to notifications",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -315,14 +386,21 @@
       "path": "archive/notifications-wt-043",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-043` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-043` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-023",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -333,11 +411,12 @@
       "path": "archive/web-console-wt-023",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-023` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-023` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "6 linked worktrees registered by this repository"
@@ -353,15 +432,16 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-059",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to auth-service",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -371,17 +451,24 @@
       "owner": "auth-service",
       "path": "data/auth-service-wt-059",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/task-019",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to mobile-bff",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -392,11 +479,12 @@
       "path": "data/mobile-bff-wt-019",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-019` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-019` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -410,14 +498,21 @@
       "path": "data/notifications-backup-21",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-039",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to search-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -428,11 +523,12 @@
       "path": "data/search-service-wt-039",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-039` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-039` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -446,11 +542,12 @@
       "path": "data/web-console-backup-1",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         ".git points at auth-service/.git/worktrees/wt-203",
         "that path does not exist"
@@ -464,11 +561,12 @@
       "path": "data/wt-203",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "the recorded metadata path does not exist (auth-service/.git/worktrees/wt-203): find the owner repository, then decide with git worktree repair or by reading the directory content"
+      "remaining_condition": "The recorded metadata path does not exist (auth-service/.git/worktrees/wt-203). Find the owner repository, then decide with git worktree repair or by reading the directory content."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -482,14 +580,21 @@
       "path": "docs-site/admin-tools-backup-29",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-007",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to admin-tools",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -500,14 +605,21 @@
       "path": "docs-site/admin-tools-wt-007",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-007` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-007` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-047",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to billing-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -518,11 +630,12 @@
       "path": "docs-site/billing-service-wt-047",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-047` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-047` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -536,14 +649,21 @@
       "path": "docs-site/data-exports-backup-9",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-027",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to media-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -554,11 +674,12 @@
       "path": "docs-site/media-service-wt-027",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-027` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-027` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "6 linked worktrees registered by this repository"
@@ -574,14 +695,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-062",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to admin-tools",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -592,14 +720,21 @@
       "path": "experiments/admin-tools-wt-062",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-062` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-062` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-022",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -610,11 +745,12 @@
       "path": "experiments/api-gateway-wt-022",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-022` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-022` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -628,14 +764,21 @@
       "path": "experiments/auth-service-copy-4",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-042",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to data-exports",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -646,11 +789,12 @@
       "path": "experiments/data-exports-wt-042",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-042` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-042` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -664,14 +808,21 @@
       "path": "experiments/worker-pipeline-copy-24",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-002",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to worker-pipeline",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -682,11 +833,12 @@
       "path": "experiments/worker-pipeline-wt-002",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-002` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-002` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -700,14 +852,21 @@
       "path": "infra/admin-tools-copy-40",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-018",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to admin-tools",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -718,11 +877,12 @@
       "path": "infra/admin-tools-wt-018",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-018` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-018` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "6 linked worktrees registered by this repository"
@@ -738,14 +898,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-058",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to billing-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -756,11 +923,12 @@
       "path": "infra/billing-service-wt-058",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-058` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-058` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -774,15 +942,16 @@
       "path": "infra/data-exports-copy-20",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-038",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to media-service",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -792,14 +961,15 @@
       "owner": "media-service",
       "path": "infra/media-service-wt-038",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -813,11 +983,12 @@
       "path": "infra/web-console-copy-2",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         ".git points at billing-service/.git/worktrees/wt-202",
         "that path does not exist"
@@ -831,14 +1002,21 @@
       "path": "infra/wt-202",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "the recorded metadata path does not exist (billing-service/.git/worktrees/wt-202): find the owner repository, then decide with git worktree repair or by reading the directory content"
+      "remaining_condition": "The recorded metadata path does not exist (billing-service/.git/worktrees/wt-202). Find the owner repository, then decide with git worktree repair or by reading the directory content."
     },
     {
       "branch": "wt/task-048",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to auth-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -849,11 +1027,12 @@
       "path": "integrations/auth-service-wt-048",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-048` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-048` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -867,14 +1046,21 @@
       "path": "integrations/mobile-bff-old-30",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-008",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to mobile-bff",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -885,11 +1071,12 @@
       "path": "integrations/mobile-bff-wt-008",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-008` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-008` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -903,14 +1090,21 @@
       "path": "integrations/notifications-old-10",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-028",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to search-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -921,14 +1115,21 @@
       "path": "integrations/search-service-wt-028",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-028` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-028` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-030",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to mobile-bff",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -939,11 +1140,12 @@
       "path": "internal/mobile-bff-wt-030",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-030` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-030` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -957,15 +1159,16 @@
       "path": "internal/notifications-copy-32",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-010",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to notifications",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -975,17 +1178,24 @@
       "owner": "notifications",
       "path": "internal/notifications-wt-010",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/task-050",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to search-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -996,11 +1206,12 @@
       "path": "internal/search-service-wt-050",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-050` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-050` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1014,11 +1225,12 @@
       "path": "internal/web-console-copy-12",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1032,14 +1244,21 @@
       "path": "labs/billing-service-copy-36",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-014",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to billing-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1050,11 +1269,12 @@
       "path": "labs/billing-service-wt-014",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-014` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-014` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1068,14 +1288,21 @@
       "path": "labs/media-service-copy-16",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-054",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to notifications",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1086,14 +1313,21 @@
       "path": "labs/notifications-wt-054",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-054` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-054` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-034",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1104,11 +1338,12 @@
       "path": "labs/web-console-wt-034",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-034` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-034` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1122,15 +1357,16 @@
       "path": "migrations/billing-service-old-14",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-052",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to mobile-bff",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1140,17 +1376,24 @@
       "owner": "mobile-bff",
       "path": "migrations/mobile-bff-wt-052",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/task-032",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to notifications",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1161,11 +1404,12 @@
       "path": "migrations/notifications-wt-032",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-032` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-032` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1179,14 +1423,21 @@
       "path": "migrations/web-console-old-34",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-012",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1197,14 +1448,21 @@
       "path": "migrations/web-console-wt-012",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-012` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-012` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-026",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to auth-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1215,11 +1473,12 @@
       "path": "ml/auth-service-wt-026",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-026` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-026` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1233,11 +1492,12 @@
       "path": "ml/mobile-bff-copy-8",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1251,14 +1511,21 @@
       "path": "ml/search-service-copy-28",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-006",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to search-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1269,14 +1536,21 @@
       "path": "ml/search-service-wt-006",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-006` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-006` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-046",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to worker-pipeline",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1287,14 +1561,21 @@
       "path": "ml/worker-pipeline-wt-046",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-046` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-046` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-040",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to admin-tools",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1305,11 +1586,12 @@
       "path": "mobile/admin-tools-wt-040",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-040` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-040` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1323,14 +1605,21 @@
       "path": "mobile/api-gateway-old-22",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-000",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1341,14 +1630,21 @@
       "path": "mobile/api-gateway-wt-000",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-000` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-000` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-020",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to data-exports",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1359,11 +1655,12 @@
       "path": "mobile/data-exports-wt-020",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-020` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-020` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "6 linked worktrees registered by this repository"
@@ -1379,14 +1676,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-060",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to media-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1397,11 +1701,12 @@
       "path": "mobile/media-service-wt-060",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-060` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-060` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1415,11 +1720,12 @@
       "path": "mobile/worker-pipeline-old-2",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         ".git points at media-service/.git/worktrees/wt-204",
         "that path does not exist"
@@ -1433,14 +1739,21 @@
       "path": "mobile/wt-204",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "the recorded metadata path does not exist (media-service/.git/worktrees/wt-204): find the owner repository, then decide with git worktree repair or by reading the directory content"
+      "remaining_condition": "The recorded metadata path does not exist (media-service/.git/worktrees/wt-204). Find the owner repository, then decide with git worktree repair or by reading the directory content."
     },
     {
       "branch": "wt/task-033",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1451,11 +1764,12 @@
       "path": "ops/api-gateway-wt-033",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-033` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-033` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1469,14 +1783,21 @@
       "path": "ops/auth-service-15-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-053",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to data-exports",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1487,11 +1808,12 @@
       "path": "ops/data-exports-wt-053",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-053` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-053` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1505,14 +1827,21 @@
       "path": "ops/worker-pipeline-35-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-013",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to worker-pipeline",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1523,14 +1852,21 @@
       "path": "ops/worker-pipeline-wt-013",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-013` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-013` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-029",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to admin-tools",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1541,11 +1877,12 @@
       "path": "partners/admin-tools-wt-029",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-029` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-029` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1559,11 +1896,12 @@
       "path": "partners/api-gateway-11-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1577,14 +1915,21 @@
       "path": "partners/data-exports-31-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-009",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to data-exports",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1595,14 +1940,21 @@
       "path": "partners/data-exports-wt-009",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-009` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-009` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-049",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to media-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1613,11 +1965,12 @@
       "path": "partners/media-service-wt-049",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-049` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-049` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "11 linked worktrees registered by this repository"
@@ -1633,14 +1986,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-055",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1651,14 +2011,21 @@
       "path": "platform/api-gateway-wt-055",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-055` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-055` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/legacy-export",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1669,15 +2036,16 @@
       "path": "platform/api-gateway-wt-legacy-export",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/legacy-export` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/legacy-export` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/oauth-refresh",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to api-gateway",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1687,17 +2055,18 @@
       "owner": "api-gateway",
       "path": "platform/api-gateway-wt-oauth-refresh",
       "preserved_because": [
-        "1 untracked file lives only here (notes-from-the-session.md)"
+        "1 untracked file here and in no commit (notes-from-the-session.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/on-external-volume",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1707,17 +2076,18 @@
       "owner": "api-gateway",
       "path": "platform/api-gateway-wt-on-external-volume",
       "preserved_because": [
-        "git reports this worktree locked (external volume)"
+        "git reports this worktree locked, and the reason recorded in the lock was not read"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Check why this worktree was locked, and whether the storage it stands on is available, before reconsidering removal."
     },
     {
       "branch": "wt/rate-limits",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to api-gateway",
-        "1 commit not contained in main"
+        "1 commit not contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1727,14 +2097,15 @@
       "owner": "api-gateway",
       "path": "platform/api-gateway-wt-rate-limits",
       "preserved_because": [
-        "1 commit on this branch is not contained in main"
+        "1 commit on this branch is not contained in origin/main"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this commit exists on another reference before reconsidering removal."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1748,14 +2119,21 @@
       "path": "platform/auth-service-backup-37",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-015",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to auth-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1766,11 +2144,12 @@
       "path": "platform/auth-service-wt-015",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-015` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-015` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "0 linked worktrees registered by this repository"
@@ -1786,11 +2165,12 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1804,14 +2184,21 @@
       "path": "platform/search-service-backup-17",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-035",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to worker-pipeline",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1822,14 +2209,21 @@
       "path": "platform/worker-pipeline-wt-035",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-035` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-035` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-051",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to admin-tools",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1840,11 +2234,12 @@
       "path": "prototypes/admin-tools-wt-051",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-051` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-051` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1858,14 +2253,21 @@
       "path": "prototypes/api-gateway-backup-33",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-011",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1876,15 +2278,16 @@
       "path": "prototypes/api-gateway-wt-011",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-011` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-011` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-031",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to data-exports",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1894,14 +2297,15 @@
       "owner": "data-exports",
       "path": "prototypes/data-exports-wt-031",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1915,11 +2319,12 @@
       "path": "prototypes/worker-pipeline-backup-13",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -1933,14 +2338,21 @@
       "path": "sandbox/billing-service-3-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-041",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to mobile-bff",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1951,14 +2363,21 @@
       "path": "sandbox/mobile-bff-wt-041",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-041` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-041` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/task-021",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to notifications",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -1969,11 +2388,12 @@
       "path": "sandbox/notifications-wt-021",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-021` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-021` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "6 linked worktrees registered by this repository"
@@ -1989,14 +2409,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-061",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to search-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2007,11 +2434,12 @@
       "path": "sandbox/search-service-wt-061",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-061` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-061` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2025,14 +2453,21 @@
       "path": "sandbox/web-console-23-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-001",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2043,11 +2478,12 @@
       "path": "sandbox/web-console-wt-001",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-001` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-001` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2061,14 +2497,21 @@
       "path": "services/admin-tools-old-18",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-036",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to billing-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2079,11 +2522,12 @@
       "path": "services/billing-service-wt-036",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-036` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-036` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2097,14 +2541,21 @@
       "path": "services/media-service-old-38",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-016",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to media-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2115,11 +2566,12 @@
       "path": "services/media-service-wt-016",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-016` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-016` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "11 linked worktrees registered by this repository"
@@ -2135,14 +2587,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-056",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2153,15 +2612,16 @@
       "path": "services/web-console-wt-056",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-056` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-056` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/local-env",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to worker-pipeline",
-        "1 ignored file a build does not regenerate",
-        "every commit on this branch is contained in main"
+        "1 ignored entry outside the assumed rebuildable list",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2171,14 +2631,15 @@
       "owner": "worker-pipeline",
       "path": "services/worker-pipeline-wt-local-env",
       "preserved_because": [
-        "1 ignored file a build does not regenerate (.env)"
+        "Ignored .env found. Its rebuildability and backup status were not checked."
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm how this file can be restored before reconsidering removal."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         ".git points at web-console/.git/worktrees/worker-pipeline-wt-retry-policy",
         "that path does not exist"
@@ -2192,11 +2653,12 @@
       "path": "services/worker-pipeline-wt-retry-policy",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "the recorded metadata path does not exist (web-console/.git/worktrees/worker-pipeline-wt-retry-policy): find the owner repository, then decide with git worktree repair or by reading the directory content"
+      "remaining_condition": "The recorded metadata path does not exist (web-console/.git/worktrees/worker-pipeline-wt-retry-policy). Find the owner repository, then decide with git worktree repair or by reading the directory content."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2210,14 +2672,21 @@
       "path": "tools/admin-tools-7-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-025",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to billing-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2228,11 +2697,12 @@
       "path": "tools/billing-service-wt-025",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-025` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-025` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2246,14 +2716,21 @@
       "path": "tools/media-service-27-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-005",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to media-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2264,11 +2741,12 @@
       "path": "tools/media-service-wt-005",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-005` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-005` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "5 linked worktrees registered by this repository"
@@ -2284,15 +2762,16 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-045",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to web-console",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2302,17 +2781,24 @@
       "owner": "web-console",
       "path": "tools/web-console-wt-045",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/task-044",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to api-gateway",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2323,11 +2809,12 @@
       "path": "vendor/api-gateway-wt-044",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-044` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-044` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2341,14 +2828,21 @@
       "path": "vendor/auth-service-old-26",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-004",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to auth-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2359,11 +2853,12 @@
       "path": "vendor/auth-service-wt-004",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-004` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-004` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "5 linked worktrees registered by this repository"
@@ -2379,11 +2874,12 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2397,11 +2893,12 @@
       "path": "vendor/search-service-old-6",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "metadata at vendor-sdk/.git/worktrees/vendor-sdk-wt-patch-2",
         "owner repository is outside the scanned roots"
@@ -2415,15 +2912,16 @@
       "path": "vendor/vendor-sdk-wt-patch-2",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "owner repository is outside the roots you named (outside-scope/vendor-sdk): include that root, or check this attachment before touching the directory"
+      "remaining_condition": "The owner repository is outside the roots you named (outside-scope/vendor-sdk). Include that root, or check this attachment before touching the directory."
     },
     {
       "branch": "wt/task-024",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to worker-pipeline",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2433,17 +2931,24 @@
       "owner": "worker-pipeline",
       "path": "vendor/worker-pipeline-wt-024",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/task-037",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to auth-service",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2454,11 +2959,12 @@
       "path": "web/auth-service-wt-037",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-037` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-037` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2472,11 +2978,12 @@
       "path": "web/mobile-bff-19-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         "no .git entry",
         "project markers present on disk"
@@ -2490,15 +2997,16 @@
       "path": "web/search-service-39-wip",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "no repository under the scanned roots claims this directory: establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now"
+      "remaining_condition": "No repository under the scanned roots claims this directory. Establish whether it is a copy, an export, or a working tree whose metadata was removed, and where its content lives now."
     },
     {
       "branch": "wt/task-017",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to search-service",
         "1 untracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2508,18 +3016,19 @@
       "owner": "search-service",
       "path": "web/search-service-wt-017",
       "preserved_because": [
-        "1 untracked file lives only here (scratch.md)"
+        "1 untracked file here and in no commit (scratch.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this untracked work is kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/billing-table",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to web-console",
         "1 modified tracked file",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2532,15 +3041,16 @@
         "1 tracked file modified and not committed (README.md)"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that these uncommitted changes are kept somewhere else before reconsidering removal."
     },
     {
       "branch": "wt/checkout",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to web-console",
         "the metadata records another path for this worktree",
-        "every commit on this branch is contained in main"
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2550,17 +3060,24 @@
       "owner": "web-console",
       "path": "web/web-console-wt-checkout-v2",
       "preserved_because": [
-        "the recorded path and the real path differ, git worktree repair applies here"
+        "the recorded path and the real path differ, which is what git worktree repair reconciles"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Reconcile the recorded path with the real path (git worktree repair) before deciding anything about this directory."
     },
     {
       "branch": "wt/old-typography",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2571,14 +3088,15 @@
       "path": "web/web-console-wt-old-typography",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/old-typography` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/old-typography` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "wt/search-filters",
       "decision": "keep",
+      "decision_sentence": "Keep pending confirmation.",
       "evidence": [
         "attached to web-console",
-        "every commit on this branch is contained in main"
+        "1 commit not contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2588,14 +3106,16 @@
       "owner": "web-console",
       "path": "web/web-console-wt-search-filters",
       "preserved_because": [
+        "1 commit on this branch is not contained in origin/main",
         "last commit 2 days before the reference time"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "nothing for the removal question. What this directory holds exists nowhere else"
+      "remaining_condition": "Confirm that this commit exists on another reference before reconsidering removal. Confirm this worktree is no longer in use before reconsidering removal."
     },
     {
       "branch": "",
       "decision": "keep",
+      "decision_sentence": "Keep. This is a repository of its own, not a linked worktree.",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
         "7 linked worktrees registered by this repository"
@@ -2611,14 +3131,21 @@
         "this is a repository of its own, not a linked worktree"
       ],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent"
+      "remaining_condition": "Out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent."
     },
     {
       "branch": "wt/task-057",
       "decision": "removal candidate, to confirm",
+      "decision_sentence": "Removal candidate, to confirm. The checks listed as evidence were read; the confirmations left are named.",
       "evidence": [
         "attached to worker-pipeline",
-        "every commit on this branch is contained in main"
+        "no modified tracked file",
+        "no untracked file",
+        "no ignored entry outside the assumed rebuildable list",
+        "not locked",
+        "the recorded path matches the real path",
+        "last commit 2026-02-10, 219 days before the reference time",
+        "every commit on this branch is contained in origin/main"
       ],
       "inspection": "complete",
       "kind": "linked worktree",
@@ -2629,11 +3156,12 @@
       "path": "web/worker-pipeline-wt-057",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "confirm that no running process has this path as its working directory, and that `wt/task-057` is not the base of an open review; this run read the filesystem, not your processes and not your forges"
+      "remaining_condition": "Confirm that no running process has this path as its working directory, and that `wt/task-057` is not the base of an open review. This run read the filesystem, not your processes and not your forges."
     },
     {
       "branch": "",
       "decision": "undetermined",
+      "decision_sentence": "Undetermined. Nothing here supports a removal.",
       "evidence": [
         ".git points at worker-pipeline/.git/worktrees/wt-201",
         "that path does not exist"
@@ -2647,29 +3175,31 @@
       "path": "web/wt-201",
       "preserved_because": [],
       "provenance": "measured on the scanned filesystem",
-      "remaining_condition": "the recorded metadata path does not exist (worker-pipeline/.git/worktrees/wt-201): find the owner repository, then decide with git worktree repair or by reading the directory content"
+      "remaining_condition": "The recorded metadata path does not exist (worker-pipeline/.git/worktrees/wt-201). Find the owner repository, then decide with git worktree repair or by reading the directory content."
     }
   ],
+  "provenance_note": "Fixture convention: 131 candidate directories, including 41 unregistered. Illustrative hypothesis, not a reconstruction. The composition and every situation built into this workspace are written in fixture/MANIFEST.md.",
   "reference_time": "2026-09-18",
   "registered_entries_without_directory": [
     {
       "branch": "wt/absent-00",
-      "git_says": "gitdir file points to non-existent location",
+      "git_says": "the recorded directory is not on disk",
       "note": "this is a registration with no directory. Pruning removes the registration, it does not remove any directory that is still on disk.",
       "owner": "api-gateway",
       "recorded_path": "wt-300"
     },
     {
       "branch": "wt/absent-01",
-      "git_says": "gitdir file points to non-existent location",
+      "git_says": "the recorded directory is not on disk",
       "note": "this is a registration with no directory. Pruning removes the registration, it does not remove any directory that is still on disk.",
       "owner": "web-console",
       "recorded_path": "wt-301"
     },
     {
       "branch": "wt/checkout",
-      "git_says": "gitdir file points to non-existent location",
-      "note": "this is a registration with no directory. Pruning removes the registration, it does not remove any directory that is still on disk.",
+      "explained_by": "web/web-console-wt-checkout-v2",
+      "git_says": "the recorded directory is not on disk",
+      "note": "this is the previous path of web/web-console-wt-checkout-v2, which was moved on disk. Nothing is missing: git worktree repair reconciles the registration with the real path.",
       "owner": "web-console",
       "recorded_path": "web-console-wt-checkout"
     }
@@ -2698,5 +3228,31 @@
   ],
   "stale_days": 30,
   "tool": "agent-workspace-triage",
-  "version": "1.0"
+  "version": "1.1",
+  "walk": {
+    "budget_seconds_per_root": 120.0,
+    "excluded_names": [
+      ".cache",
+      ".git",
+      ".gradle",
+      ".hg",
+      ".mypy_cache",
+      ".next",
+      ".nuxt",
+      ".pytest_cache",
+      ".svn",
+      ".terraform",
+      ".turbo",
+      ".venv",
+      "Pods",
+      "__pycache__",
+      "build",
+      "dist",
+      "node_modules",
+      "target",
+      "venv"
+    ],
+    "git_timeout_seconds": 30.0,
+    "max_depth": 3
+  }
 }
