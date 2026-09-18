@@ -284,7 +284,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "6 linked worktrees registered by this repository"
+        "5 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -340,7 +340,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "7 linked worktrees registered by this repository"
+        "6 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -561,7 +561,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "7 linked worktrees registered by this repository"
+        "6 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -725,7 +725,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "7 linked worktrees registered by this repository"
+        "6 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -1366,7 +1366,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "7 linked worktrees registered by this repository"
+        "6 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -1620,7 +1620,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "12 linked worktrees registered by this repository"
+        "11 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -1773,7 +1773,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "1 linked worktree registered by this repository"
+        "0 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -1976,7 +1976,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "7 linked worktrees registered by this repository"
+        "6 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -2122,7 +2122,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "12 linked worktrees registered by this repository"
+        "11 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -2271,7 +2271,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "6 linked worktrees registered by this repository"
+        "5 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -2366,7 +2366,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "6 linked worktrees registered by this repository"
+        "5 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",
@@ -2598,7 +2598,7 @@
       "decision": "keep",
       "evidence": [
         ".git is a directory, so this is not a linked worktree",
-        "8 linked worktrees registered by this repository"
+        "7 linked worktrees registered by this repository"
       ],
       "inspection": "complete",
       "kind": "independent repository",

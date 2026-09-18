@@ -532,7 +532,12 @@ def inspect(directory: str, roots: list[str], now: datetime, stale_days: int,
         facts["evidence"] = [".git is a directory, so this is not a linked worktree"]
         try:
             listing = parse_worktree_list(git(directory, ["worktree", "list", "--porcelain"], git_timeout))
-            linked = [r for r in listing if r.get("worktree") and os.path.normpath(r["worktree"]) != os.path.normpath(directory)]
+            # realpath on both sides: git answers with the resolved path, and on
+            # macOS a temporary directory reaches us through a symlink, which made
+            # this count differ by one between platforms.
+            here = os.path.realpath(directory)
+            linked = [r for r in listing
+                      if r.get("worktree") and os.path.realpath(r["worktree"]) != here]
             facts["evidence"].append(
                 quantity(len(linked), "linked worktree", "linked worktrees") + " registered by this repository"
             )

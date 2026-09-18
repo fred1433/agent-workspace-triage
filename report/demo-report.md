@@ -59,7 +59,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `archive/mobile-bff`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 5 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -67,7 +67,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `data/auth-service`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 7 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -83,7 +83,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `experiments/admin-tools`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 7 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -91,7 +91,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `infra/billing-service`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 7 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -123,7 +123,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `mobile/media-service`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 7 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -131,7 +131,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `platform/api-gateway`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 12 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 11 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -163,7 +163,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `platform/infra-cdk-baseline`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 1 linked worktree registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 0 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -179,7 +179,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `sandbox/search-service`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 7 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -187,7 +187,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `services/web-console`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 12 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 11 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -203,7 +203,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `tools/notifications`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 5 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -219,7 +219,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `vendor/data-exports`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 6 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 5 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
@@ -267,7 +267,7 @@ A positive reason to preserve was found. These are the directories a count based
 ### `web/worker-pipeline`
 
 - Observation: a repository with its own history, holding its main working tree
-- Evidence: .git is a directory, so this is not a linked worktree; 8 linked worktrees registered by this repository
+- Evidence: .git is a directory, so this is not a linked worktree; 7 linked worktrees registered by this repository
 - Reason to preserve: this is a repository of its own, not a linked worktree
 - Decision: keep
 - Remaining condition: out of scope for worktree triage: it holds its own history, so it is compared with its remote, not with a parent
