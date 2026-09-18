@@ -460,21 +460,76 @@ def short_branch(ref: str) -> str:
 
 
 def content_filters(directory: str, git_timeout: float) -> list[str]:
-    """The content filters this repository configures, by name.
+    """The content filters that could actually run in this working tree.
 
     A git filter is a command, and git starts it while answering an ordinary
     question about a file. A collector that calls itself read only cannot run
-    somebody else's conversion command, so it looks for one first and stops.
+    somebody else's conversion command, so it looks first and stops.
+
+    Two things have to be true before a filter can run: a driver is configured
+    with a clean or process command, and an attribute assigns that driver to a
+    path. Configuration alone is not enough, and treating it as enough makes the
+    collector useless on any machine where git-lfs is installed, which is most of
+    them.
     """
     text = git(directory, ["config", "--get-regexp", r"^filter\.[^.]+\.(clean|process)$"],
                git_timeout, allow_exit=(0, 1))
-    names = set()
+    configured = set()
     for line in text.splitlines():
-        key = line.split(" ", 1)[0]
-        parts = key.split(".")
+        parts = line.split(" ", 1)[0].split(".")
         if len(parts) >= 3:
-            names.add(parts[1])
-    return sorted(names)
+            configured.add(parts[1])
+    if not configured:
+        return []
+
+    assigned = set()
+    for source in attribute_sources(directory, git_timeout):
+        for line in source.splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            for token in stripped.split():
+                if token.startswith("filter="):
+                    assigned.add(token[len("filter="):])
+    return sorted(configured & assigned)
+
+
+def attribute_sources(directory: str, git_timeout: float) -> list[str]:
+    """The attribute files that apply to this working tree, read as plain text.
+
+    Reading a file is not converting it: nothing here makes git touch content.
+    The in tree files are listed by git, plus the one at the root whether or not
+    it is tracked, plus the per repository and per user files.
+    """
+    texts: list[str] = []
+    paths: list[str] = [os.path.join(directory, ".gitattributes")]
+
+    listing = git(directory, ["ls-files", "-z", "--", "*.gitattributes"], git_timeout, allow_exit=(0, 1))
+    names = [name for name in listing.split("\0") if name]
+    if len(names) > 200:
+        # Too many to read inside a bounded inspection. The conservative answer
+        # is to behave as if a filter were assigned.
+        return ["* filter=unread"]
+    paths += [os.path.join(directory, name) for name in names]
+
+    for key in ("core.attributesFile",):
+        value = git(directory, ["config", "--get", key], git_timeout, allow_exit=(0, 1)).strip()
+        if value:
+            paths.append(os.path.expanduser(value))
+    for name in ("info/attributes",):
+        for base in (git(directory, ["rev-parse", "--absolute-git-dir"], git_timeout, allow_exit=(0, 1)).strip(),
+                     git(directory, ["rev-parse", "--path-format=absolute", "--git-common-dir"],
+                         git_timeout, allow_exit=(0, 1)).strip()):
+            if base:
+                paths.append(os.path.join(base, name))
+
+    for path in dict.fromkeys(paths):
+        try:
+            with open(path, "r", encoding="utf-8", errors="replace") as handle:
+                texts.append(handle.read(200000))
+        except OSError:
+            continue
+    return texts
 
 
 def established_reference(owner: str, git_timeout: float, override: str = "") -> str:

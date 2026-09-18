@@ -140,12 +140,22 @@ class NoNetwork(unittest.TestCase):
             if required:
                 self.fail("unshare was required for this run and is not installed")
             self.skipTest("unshare is not available on this platform")
-        probe = subprocess.run(["unshare", "-rn", "true"], stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE, text=True)
-        if probe.returncode != 0:
+        # Recent Ubuntu forbids an unprivileged user namespace, so the second
+        # form is the one that runs in continuous integration.
+        prefixes = [["unshare", "-rn"], ["sudo", "-n", "unshare", "-n"]]
+        prefix = None
+        last = ""
+        for candidate in prefixes:
+            probe = subprocess.run([*candidate, "true"], stdout=subprocess.PIPE,
+                                   stderr=subprocess.PIPE, text=True)
+            if probe.returncode == 0:
+                prefix = candidate
+                break
+            last = probe.stderr.strip()
+        if prefix is None:
             if required:
-                self.fail(f"a network namespace was required and could not be created: {probe.stderr.strip()}")
-            self.skipTest("this machine does not allow an unprivileged network namespace")
+                self.fail(f"a network namespace was required and could not be created: {last}")
+            self.skipTest("this machine does not allow a network namespace")
 
         fixture = support.build_fixture("small")
         roots = []
@@ -154,7 +164,7 @@ class NoNetwork(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             out = os.path.join(folder, "report.json")
             done = subprocess.run(
-                ["unshare", "-rn", sys.executable, str(support.ROOT / "triage.py"), *roots,
+                [*prefix, sys.executable, str(support.ROOT / "triage.py"), *roots,
                  "--now", support.REFERENCE_TIME, "--json", out],
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=600,
             )

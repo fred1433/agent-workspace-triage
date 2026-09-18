@@ -222,6 +222,31 @@ class NoUncontrolledConversionIsRun(unittest.TestCase):
             self.assertIn("filter", row["remaining_condition"].lower())
 
 
+    def test_a_filter_that_is_installed_and_assigned_to_nothing_blocks_nothing(self):
+        """Found on a machine with git-lfs installed, which is most of them.
+
+        A driver in the configuration cannot run on its own: an attribute has to
+        assign it to a path. Refusing to inspect every repository on a machine
+        where git-lfs exists is not caution, it is an unusable tool.
+        """
+        with tempfile.TemporaryDirectory(prefix="triage-ce-lfs-") as folder:
+            root = Path(folder) / "root"
+            owner = small_repo(root / "owner")
+            establish_default_branch(owner)
+            git_here(owner, "config", "filter.lfs.clean", "git-lfs clean -- %f")
+            git_here(owner, "config", "filter.lfs.process", "git-lfs filter-process")
+            git_here(owner, "worktree", "add", "-q", "-b", "wt/task", str(root / "wt-task"), "main")
+            report = triage.collect(roots=[str(root)], now=support.now(), stale_days=30, budget=60.0,
+                                    max_depth=3, excludes=[], git_timeout=30.0, with_sizes=False)
+            self.assertEqual("keep", support.by_name(report)["wt-task"]["decision"])
+
+            (root / "wt-task" / ".gitattributes").write_text("*.psd filter=lfs\n", encoding="utf-8")
+            report = triage.collect(roots=[str(root)], now=support.now(), stale_days=30, budget=60.0,
+                                    max_depth=3, excludes=[], git_timeout=30.0, with_sizes=False)
+            self.assertEqual("undetermined", support.by_name(report)["wt-task"]["decision"],
+                             "an assignment, even by an untracked attributes file, is what makes a filter run")
+
+
 class TheReportCarriesNamesAndNotFreeText(unittest.TestCase):
     """Point 5: the free text of a lock file came back out in the report."""
 
