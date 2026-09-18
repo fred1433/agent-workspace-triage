@@ -77,8 +77,10 @@ hold the only trace of an incident.
 - **No external call.** The collector imports no network module, and runs only
   `git`, `ps` and `lsof` from a fixed allow list. Two controls: a static reading
   of the source that fails on a network import, and a run of the whole
-  collection inside a network namespace with nothing in it (`unshare -rn`) in
-  continuous integration, where the collection still produces its report. A
+  collection inside a network namespace with nothing in it, in continuous
+  integration, where the collection still produces its report. That namespace is
+  created with `unshare -rn` where an unprivileged one is allowed and with
+  `sudo -n unshare -n` where it is not, and a skip fails the run. A
   third test runs it behind a listener that counts connections and sees none;
   that one only covers what a proxy variable would catch, and the listener is
   exercised in the same test so that the zero means something.
